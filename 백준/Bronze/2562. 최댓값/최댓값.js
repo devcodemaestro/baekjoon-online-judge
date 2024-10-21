@@ -1,18 +1,12 @@
 const fs = require("fs");
 const input = fs
-  .readFileSync("/dev/stdin")
+  .readFileSync("dev/stdin")
   .toString()
   .trim()
   .split("\n")
   .map(Number);
 
-let maxNum = 0;
-let idx = 0;
-for (let num of input) {
-  if (num > maxNum) {
-    maxNum = num;
-    idx = input.indexOf(num);
-  }
-}
+let maxNum = Math.max(...input);
+let idx = input.indexOf(maxNum);
 console.log(maxNum);
-console.log(idx+1);
+console.log(idx + 1);
