@@ -16,5 +16,5 @@ for (let i = 0; i < input.length; i++) {
     str += length + "\n";
   }
 }
-str = str.substring(0, str.length - 1);
+str = str.slice(0, -1);
 console.log(str);
