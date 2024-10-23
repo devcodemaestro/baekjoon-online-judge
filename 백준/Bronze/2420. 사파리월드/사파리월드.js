@@ -1,4 +1,2 @@
-const fs = require("fs");
-let [N, M] = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
-
-console.log(Math.abs(N - M));
+let [a, b] = require("fs").readFileSync("/dev/stdin").toString().trim().split(" ").map(Number);
+console.log(Math.abs(a - b));
