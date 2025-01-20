@@ -6,7 +6,6 @@ function solution(my_string, queries) {
         let [s, e] = queries[i]
         arr = str.split("")
         let reverse = arr.slice(s,e+1).reverse()
-        // 검증 끝
         arr.splice(s,(e - s + 1), ...reverse)
         str = arr.join("")
     }        
