@@ -6,11 +6,12 @@ const rl = readline.createInterface({
 
 let input = [];
 
+
 rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
-    str = input[0].split("");
-    result = ""
+    let str = input[0];
+    let result = ""
     for(let i = 0; i < str.length; i++){
         if(str[i] === str[i].toUpperCase()){
             result += str[i].toLowerCase()
